@@ -12,7 +12,7 @@
     <p>숫자는 1부터 100사이에 있습니다.</p>
 
     <form name="fun">
-    숫자: <input type="number" name="input">
+    숫자: <input type="number" id="input">
     <input type="submit" onclick="click();" style="margin-left: 3px;margin-bottom: 10px;">
     <br>
     추측횟수: <input type="text" name="count">
@@ -22,7 +22,7 @@
         function click() {
             var ans = 5;
             var countn = 0;
-            var diff = Number(document.fun.input.value);
+            var diff = Number(document.getElementById("input").value);
             if (ans > diff) {
                 document.fun.hint.value = "높습니다";
             }

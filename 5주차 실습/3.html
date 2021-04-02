@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>덧셈 계산기</title>
+</head>
+
+<body>
+    <h3>덧셈 계산기</h3>
+    첫번째 정수: <input type="number" id="one"><br>
+    첫번째 정수: <input type="number" id="two"><br>
+    합계: <input type="number" id="ans"><br>
+    <input type="button" value="계산" onclick="calc();">
+
+    <script>
+        function calc() {
+            x = Number(document.getElementById('one').value);
+            y = Number(document.getElementById('two').value);
+            document.getElementById('ans').value = x + y;
+        }
+    </script>
+</body>
+
+</html>

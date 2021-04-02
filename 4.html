@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>덧셈 계산 게임</title>
+</head>
+
+<body>
+    <h3>덧셈 계산을하고 결과를 입력한 후 버튼을 클릭해 답을 확인해 보세요.</h3>
+    <hr>
+    <p>20+40=?</p>
+    합계: <input type="number" id="ans"><br>
+    <input type="button" value="결과확인" onclick="answer();">
+
+    <script>
+        function answer() {
+            x = Number(document.getElementById('ans').value);
+            if(x==60){
+                alert("정답입니다!");
+            }
+            else{
+                alert("오답입니다!")
+            }
+        }
+    </script>
+</body>
+
+</html>

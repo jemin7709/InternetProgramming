@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>숫자 맞추기 게임</title>
+</head>
+
+<body>
+    <h1>숫자 맞추기 게임</h1>
+    <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.</p>
+    <p>숫자는 1부터 100사이에 있습니다.</p>
+
+    <form name="fun">
+    숫자: <input type="number" name="input">
+    <input type="submit" onclick="click();" style="margin-left: 3px;margin-bottom: 10px;">
+    <br>
+    추측횟수: <input type="text" name="count">
+    힌트: <input type="text" name="hint">
+    </form>
+    <script>
+        function click() {
+            var ans = 5;
+            var countn = 0;
+            var diff = Number(document.fun.input.value);
+            if (ans > diff) {
+                document.fun.hint.value = "높습니다";
+            }
+            else if (ans < diff) {
+                document.body.hint.value = "낮습니다";
+            }
+            else {
+                document.body.hint.value = "정답입니다!";
+            }
+            document.body.count.value = ++countn;
+        }
+    </script>
+</body>
+
+</html>

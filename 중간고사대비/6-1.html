@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>book 객체 만들기</h1>
+    <hr>
+    <script>
+        function book(title, author, price) {
+            this.title = title;
+            this.author = author;
+            this.price = price;
+        }
+        var input = new book();
+        var lib = new Array();
+        
+        for (var i = 0; i < 5; i++) {
+            var temp = prompt("콤마로 구분하여 제목, 저자, 가격 입력").split(',');
+            input.title = temp[0];
+            input.author = temp[1];
+            input.price = temp[2];
+            lib[i] = input;
+            document.write(lib[i].title + ', ' + lib[i].author + ', ' + lib[i].price+"<br>");
+        }
+    </script>
+</body>
+
+</html>

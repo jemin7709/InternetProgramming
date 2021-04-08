@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>숫자 맞추기 게임</h1>
+    <p>이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다.</p>
+    <p>숫자는 0부터 59사이에 있습니다.</p>
+    숫자 <input type="number" name="input"><button onclick="timeCorrect()">확인</button><br>
+    추측횟수: <input type="number" name="count" value="0"> 힌트: <input type="text" name="hint">
+    <script>
+        var empty = new Date;
+        var ans = empty.getSeconds();
+        function timeCorrect() {
+            var diff = Number(document.getElementsByName('input')[0].value);
+            var count = Number(document.getElementsByName('count')[0].value);
+            if (ans == diff) {
+                document.getElementsByName('hint')[0].value = "성공입니다!";
+            }
+            else if (ans > diff) {
+                document.getElementsByName('hint')[0].value = "정답보다 작습니다";
+                document.getElementsByName('count')[0].value = count + 1;
+            }
+            else if (ans < diff) {
+                document.getElementsByName('hint')[0].value = "정답보다 큽니다";
+                document.getElementsByName('count')[0].value = count + 1;
+            }
+        }
+    </script>
+</body>
+
+</html>

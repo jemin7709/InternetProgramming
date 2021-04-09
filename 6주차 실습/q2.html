@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .hide{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h3>다음 빈 곳에 숨은 단어?<span><button onclick="show()" style="margin-left: 0.2em;">show/hide</button></span></h3>
+    <hr>
+    <ul>
+        <li>I (<span class="hide">love</span>) you.</li>
+        <li>CSS is Casading (<span class="hide">Style</span>) Sheet.</li>
+        <li>응답하라 (<span class="hide">1988</span>).</li>
+    </ul>
+    <script>
+        function show(){
+            var spanArray = document.getElementsByClassName("hide");
+            
+            for(i=0;i<spanArray.length;i++){
+                var span = spanArray[i]; 
+                if(span.style.visibility == "hidden"){
+                    span.style.visibility = "visible";
+                }
+                else{
+                    span.style.visibility = "hidden";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>정답의 동적 삽입</h1>
+    <p>Q.거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+    <button onclick="ans1()">답보기</button>
+    <p id="ans1"></p>
+    <p>Q.죽느냐 사느냐 어떤 것이 문제인가?</p>
+    <button onclick="ans2()">답보기</button>
+    <p id="ans2"></p>
+    <script>
+        function ans1() {
+            var obj = document.getElementById("ans1");
+            var ans = document.createElement("div");
+            ans.innerHTML = "백설공주"
+            obj.appendChild(ans);
+            ans.onclick = function () {
+                obj.removeChild(this);
+            }
+        }
+        function ans2() {
+            var obj = document.getElementById("ans2");
+            var ans = document.createElement("div");
+            ans.innerHTML = "둘다"
+            obj.appendChild(ans);
+            ans.onclick = function () {
+                obj.removeChild(this);
+            }
+        }
+    </script>
+</body>
+
+</html>

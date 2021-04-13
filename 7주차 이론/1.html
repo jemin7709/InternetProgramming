@@ -7,19 +7,25 @@
 </head>
 
 <body>
-    <h3>물품을 선택하면 금액이 자동 계산됩니다.</h3>
-    <hr>
-        <input type="checkbox" onclick="ck(10000)">모자 1만원
-        <input type="checkbox" onclick="ck(30000)">구두 3만원
-        <input type="checkbox" onclick="ck(80000)">명품가방 8만원<br>
-    지불하실 금액 <input type="number" id="price">
     <script>
-        function ck(e){
-            var num = Number(document.getElementById("price").value);
-            num += e;
-            document.getElementById("price").value = num;
+        var num=0;
+        function priceCalc(obj) {
+            var sum = document.getElementById("price");
+            if(obj.checked == true){
+                num += Number(obj.value);
+            }
+            else if(obj.checked == false){
+                num -= Number(obj.value);
+            }
+            sum.value = num;
         }
     </script>
+    <h3>물품을 선택하면 금액이 자동 계산됩니다.</h3>
+    <hr>
+    <input type="checkbox" value="10000" onchange="priceCalc(this)">모자 1만원
+    <input type="checkbox" value="30000" onchange="priceCalc(this)">구두 3만원
+    <input type="checkbox" value="80000" onchange="priceCalc(this)">명품가방 8만원<br>
+    지불하실 금액 <input type="number" id="price" value="0">
 </body>
 
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>계산해봅시다</title>
+</head>
+
+<body>
+    <h3>계산해봅시다</h3>
+    <hr>
+    <p>2 + 4 = <span onclick="ans(6)">답</span></p>
+    <br>
+    <p>4 * 20 + 64= <span onclick="ans(144)">답</span></p>
+    <br>
+    <p>20 / 5 - 8 * 2 = <span onclick="ans(-12)">답</span></p>
+    <br>
+
+    <script>
+        function ans(e) {
+            if (e == 6) {
+                document.getElementsByTagName('span')[0].innerHTML = e;
+            }
+            else if (e == 144) {
+                document.getElementsByTagName('span')[1].innerHTML = e;
+            }
+            else if (e == -12) {
+                document.getElementsByTagName('span')[2].innerHTML = e;
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

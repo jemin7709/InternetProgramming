@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>객체에서 선택한 과일 출력</title>
+</head>
+
+<body onload="init()">
+    <h1>select 객체에서 선택한 과일 출력</h1>
+    <hr>
+    <p>과일을 출력하면 이미지가 출력됩니다.</p>
+    <select id="f" onchange="changeImg(this)">
+        <option value="바나나">바나나</option>
+        <option value="망고">망고</option>
+        <option value="사과">사과</option>
+    </select>
+    <img src="" alt="사진" width="200px" height="200px">
+    <script>
+        function changeImg(obj) {
+            var i;
+            if(obj.value == "바나나"){
+                document.getElementsByTagName("img")[0].src = "img/바나나.jpg";
+            }
+            if(obj.value == "망고"){
+                document.getElementsByTagName("img")[0].src = "img/망고.png";
+            }
+            if(obj.value == "사과"){
+                document.getElementsByTagName("img")[0].src = "img/사과.jpg";
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

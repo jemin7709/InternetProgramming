@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function change(si) {
+            var img = document.getElementsByTagName("img")[0];
+            img.src = si.options[si.selectedIndex].value;
+        }
+    </script>
+    <h3>select 객체에서 선택한 과일 출력</select></h3>
+    <hr>
+    <p>과일을 선택하면 이미지가 출력됩니다</p>
+    <select id="s" onchange="change(this)">
+        <option value="img/바나나.jpg" selected>바나나</option>
+        <option value="img/사과.jpg">사과</option>
+        <option value="img/망고.jpg">망고</option>
+    </select>
+    <img src="img/바나나.jpg" alt="" width="200" height="200">
+</body>
+
+</html>

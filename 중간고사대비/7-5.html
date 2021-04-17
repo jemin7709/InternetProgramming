@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body onload="change()">
+    <script>
+        function change() {
+            var si = document.getElementById("s");
+            var img = document.getElementsByTagName("img")[0];
+            var span = document.getElementById("size");
+            img.src = si.options[si.selectedIndex].value;
+            span.innerHTML = img.width+'x'+img.height;
+        }
+    </script>
+    <h3>select 객체에서 선택한 과일 출력</select></h3>
+    <hr>
+    <p>과일을 선택하면 이미지가 출력됩니다</p>
+    <select id="s" onchange="change()">
+        <option value="img/바나나.jpg" selected>바나나</option>
+        <option value="img/사과.jpg">사과</option>
+        <option value="img/망고.jpg">망고</option>
+    </select>
+    <span id="size"></span><br>
+    <img src="img/바나나.jpg" alt="">
+</body>
+
+</html>

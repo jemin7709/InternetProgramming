@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function key(eve){
+            var str="";
+            var output = document.getElementById("output");
+            str+=String.fromCharCode(eve.keyCode) + "이(가) 입력되었습니다";
+            output.innerHTML = str;
+        }
+    </script>
+    <h1>키 리스너와 키 이벤트 객체의 프로퍼티</h1>
+    <hr>
+    <p>텍스트 창에 키를 눌러 보세요</p>
+    <input type="text" id="input" onkeydown="key(event)">
+    <div id="output"></div>
+</body>
+</html>

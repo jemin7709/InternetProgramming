@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calc(key) {
+            if (key.keyCode == 13) {
+                var s = document.getElementById("s");
+                var d = document.getElementById("d");
+                d.value = eval(s.value);
+            }
+        }
+    </script>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <p>수식을 입력하고 &lt;Enter&gt;를 입력하세요.</p>
+    식<input type="text" id="s" onkeydown="calc(event)"><br>
+    값<input type="text" id="d">
+</body>
+
+</html>

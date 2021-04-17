@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>계산해봅시다</title>
+</head>
+
+<body>
+
+    <script>
+        function change(t) {
+            if (t.innerHTML == "답") {
+                t.innerHTML = t.id;
+            }
+            else {
+                t.innerHTML = "답";
+            }
+        }
+    </script>
+    <h1>계산해봅시다</h1>
+    <hr>
+    <p> 2 + 4 = <span id="6" onclick="change(this)">답</span></p>
+    <p>4 * 20 + 64 = <span id="144" onclick="change(this)">답</span></p>
+    <p>20 / 5 - 2 * 2= <span id="-12" onclick="change(this)">답</span></p>
+</body>
+
+</html>

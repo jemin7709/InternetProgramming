@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function b(obj) {
+            if (obj.value == "") {
+                alert("이름을 입력해주세요");
+                obj.focus();
+            }
+        }
+    </script>
+    <h1>onfocus와 onblur</h1>
+    <hr>
+    <p>이름을 입력하지 않고 다른 창으로 이동할 수 없습니다</p>
+    이름<input type="text" onblur="b(this)"><br>
+    학번<input type="text">
+</body>
+
+</html>

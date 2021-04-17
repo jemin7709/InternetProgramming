@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body onload="T()">
+    <script>
+        var flow = false;
+        function T() {
+            var p = document.getElementById("display");
+            var time = new Date;
+            var dis = "";
+            if (time.getHours() > 12) {
+                dis += "오후 ";
+            }
+            else {
+                dis += "오전 ";
+            }
+            dis += time.getHours() + "시 " + time.getMinutes() + "분 " + time.getSeconds() + "초";
+            p.innerHTML = dis;
+            flow = setTimeout("T()", 1000);
+        }
+
+        function Tstop() {
+            var p = document.getElementById("display");
+            if (flow != null) {
+                clearTimeout(flow);
+                flow = null;
+                p.style.color = "gray";
+            }
+            else {
+                flow = setTimeout("T()", 1000);
+                p.style.color = "black";
+            }
+        }
+    </script>
+    <p id="display"></p>
+    <button onclick="Tstop()">stop</button>
+</body>
+
+</html>

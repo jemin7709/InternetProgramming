@@ -8,13 +8,13 @@
 
 <body>
     <script>
-        var num=0;
+        var num = 0;
         function priceCalc(obj) {
             var sum = document.getElementById("price");
-            if(obj.checked == true){
+            if (obj.checked == true) {
                 num += Number(obj.value);
             }
-            else if(obj.checked == false){
+            else if (obj.checked == false) {
                 num -= Number(obj.value);
             }
             sum.value = num;

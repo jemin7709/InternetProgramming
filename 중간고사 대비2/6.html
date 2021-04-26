@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="T()">
+    <h1>오전오후</h1>
+    <hr>
+    <p id="timer"></p>
+    <script>
+        function T(){
+        var time = new Date;
+        var dis= "";
+        if(time.getHours()>12){
+            dis+="오후";
+        }
+        else{
+            dis+="오전";
+        }
+        dis+=time.getHours()+', '+time.getMinutes()+', '+time.getSeconds();
+        document.getElementById("timer").innerHTML = dis;
+        setTimeout("T()",1000);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>선택</h1>
+    <hr>
+    <form action="" id="f" onchange="cha()">
+        <input type="checkbox" value="10000">모자
+        <input type="checkbox" value="30000">구두
+        <input type="checkbox" value="80000">가방
+    </form>
+    지불하실 금액<input type="number" id="o" value="0">
+    <script>
+
+        function cha() {
+            var j = 0;
+            var temp = document.getElementById("f");
+            for (i = 0; i < temp.length; i++) {
+                if (temp[i].checked) {
+                    j += Number(temp[i].value);
+                }
+            }
+            document.getElementById('o').value = j;
+        }
+    </script>
+</body>
+
+</html>

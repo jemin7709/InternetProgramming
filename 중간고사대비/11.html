@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ch(si){
+            var img = document.getElementById("p");
+            img.src = si.options[si.selectedIndex].value;
+        }
+    </script>
+    <h3>d</h3>
+    <hr>
+    <p>이미지 출력</p>
+    <select name="" id="s" onchange="ch(this)">
+    <option value="img/바나나.jpg" selected> 바나나</option>
+    <option value="img/사과.jpg">사과</option>
+    <option value="img/망고.jpg">망고</option>
+    </select>
+    <img src="img/바나나.jpg" alt="" id="p">
+</body>
+</html>
